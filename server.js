@@ -6,9 +6,7 @@ app.set('view-engine', 'ejs')
 
 app.use(express.urlencoded({extended : true}));
 app.use(bodyParser.urlencoded({extended : true}));
-
-var task = ["car", "bike", "home"];
-var complete = ["snacks"]; 
+ 
 
 app.get('/', (req, res)=>{
     res.render('/media/ubuntu/6AF240D1F240A2E5/Learning/todo/views/index.ejs')
