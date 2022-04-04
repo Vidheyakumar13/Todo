@@ -10,8 +10,9 @@ app.get('/', (req, res) =>{
     res.send(todo);
 })
 app.get('/:id', (req,res)=>{
-  let task = req.params.id;
-  res.send(task.todo)
+  let task = req.body;
+  task.id = Number(req.params.id);
+  res.json(task)
 })
 app.post('/', (req, res) => {
     let newtodo = req.body;
